@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<CraftingQualityRebalanced>Crafting Quality Rebalanced</CraftingQualityRebalanced>
+	<CraftingQualityRebalanced.SliderWarning>Sliders are dependent on the values of the qualities above and below, try moving those if you can't move one.</CraftingQualityRebalanced.SliderWarning>
+	<CraftingQualityRebalanced.MinimumSkillPoor>Minimum Skill for at least Poor Item Quality: </CraftingQualityRebalanced.MinimumSkillPoor>
+	<CraftingQualityRebalanced.MinimumSkillNormal>Minimum Skill for at least Normal Item Quality: </CraftingQualityRebalanced.MinimumSkillNormal>
+	<CraftingQualityRebalanced.MinimumSkillGood>Minimum Skill for at least Good Item Quality: </CraftingQualityRebalanced.MinimumSkillGood>
+	<CraftingQualityRebalanced.MinimumSkillExcellent>Minimum Skill for at least Excellent Item Quality, set above 20 to deactivate: </CraftingQualityRebalanced.MinimumSkillExcellent>
+	<CraftingQualityRebalanced.MinimumSkillMasterwork>Minimum Skill for at least Masterwork Item Quality, set above 20 to deactivate: </CraftingQualityRebalanced.MinimumSkillMasterwork>
+	<CraftingQualityRebalanced.MinimumSkillLegendary>Minimum Skill for Legendary Item Quality, set above 20 to deactivate: </CraftingQualityRebalanced.MinimumSkillLegendary>
+</LanguageData>

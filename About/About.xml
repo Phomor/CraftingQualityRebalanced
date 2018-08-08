@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Crafting Quality Rebalanced</name>
+	<author>Phomor</author>
+	<targetVersion>0.19.1987</targetVersion>
+	<description>
+Rebalances Item Crafting Quality, for example a skill 20 Crafter won't have the chance to make an awful item anymore.
+Skill	Minimal Quality
+7		Poor
+9		Normal
+13		Good
+Now with adjustable thresholds and a setting for every quality threshold too.
+	</description>
+</ModMetaData>

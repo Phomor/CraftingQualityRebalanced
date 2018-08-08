@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<CraftingQualityRebalanced>Crafting Quality Rebalanced</CraftingQualityRebalanced>
+	<CraftingQualityRebalanced.SliderWarning>Schieberegler sind abhängig von den Werten darüber und darunter.\nVersuche diese zu bewegen wenn du einen anderen nicht bewegen kannst.</CraftingQualityRebalanced.SliderWarning>
+	<CraftingQualityRebalanced.MinimumSkillPoor>Minimale Stufe für mindestens schlechte Gegenstandsqualität: </CraftingQualityRebalanced.MinimumSkillPoor>
+	<CraftingQualityRebalanced.MinimumSkillNormal>Minimale Stufe für mindestens normale Gegenstandsqualität: </CraftingQualityRebalanced.MinimumSkillNormal>
+	<CraftingQualityRebalanced.MinimumSkillGood>Minimale Stufe für mindestens gute Gegenstandsqualität: </CraftingQualityRebalanced.MinimumSkillGood>
+	<CraftingQualityRebalanced.MinimumSkillExcellent>Minimale Stufe für mindestens exzellente Gegenstandsqualität, deaktiviert wenn Wert über 20: </CraftingQualityRebalanced.MinimumSkillExcellent>
+	<CraftingQualityRebalanced.MinimumSkillMasterwork>Minimale Stufe für mindestens meisterliche Gegenstandsqualität, deaktiviert wenn Wert über 20: </CraftingQualityRebalanced.MinimumSkillMasterwork>
+	<CraftingQualityRebalanced.MinimumSkillLegendary>Minimale Stufe für legendäre Gegenstandsqualität, deaktiviert wenn Wert über 20: </CraftingQualityRebalanced.MinimumSkillLegendary>
+</LanguageData>
