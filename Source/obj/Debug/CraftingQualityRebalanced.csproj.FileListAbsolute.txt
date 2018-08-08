@@ -1,4 +1,0 @@
-D:\Downloads\Mods\Rimworld\meine\CraftingQualityRebalanced\Source\obj\Debug\CraftingQualityRebalanced.csprojResolveAssemblyReference.cache
-D:\Downloads\Mods\Rimworld\meine\Assemblies\CraftingQualityRebalanced.dll
-D:\Downloads\Mods\Rimworld\meine\CraftingQualityRebalanced\Source\obj\Debug\CraftingQualityRebalanced.dll
-D:\Downloads\Mods\Rimworld\meine\CraftingQualityRebalanced\Assemblies\CraftingQualityRebalanced.dll
