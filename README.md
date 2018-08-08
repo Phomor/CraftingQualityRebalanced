@@ -7,10 +7,11 @@ Could maybe work on other versions, but wasn't tested on any other.
 Features:
 High Skill Colonists can't craft or build bad Quality items anymore.
 
-Skill Level		Minimum Item Quality
-		9		Poor
-		13		Normal
-		17		Good
+Skill 9 -> Minimum Quality Poor
+
+Skill 13 -> Minimum Quality Normal
+
+Skill 17 -> Minimum Quality Good
 
 Installation:
 -Unzip the .zip in the /Rimworld/Mods/ folder.
