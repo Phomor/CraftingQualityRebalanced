@@ -23,8 +23,10 @@ namespace CraftingQualityRebalanced
 		public int minSkillNormal = 13;
 		public int minSkillGood = 17;
 		public int minSkillExcellent = 21;
-		public int minSkillMasterwork = 21;
-		public int minSkillLegendary = 21;
+		public int minSkillMasterwork = 22;
+		public int minSkillLegendary = 19;
+		//public int masterworkChance = 10;
+		public int legendaryChance = 5;
 		
 		public override void ExposeData()
 		{
@@ -34,7 +36,8 @@ namespace CraftingQualityRebalanced
 			Scribe_Values.Look(ref minSkillGood, "minskillgood", 17);
 			Scribe_Values.Look(ref minSkillExcellent, "minskillexcellent", 21);
 			Scribe_Values.Look(ref minSkillMasterwork, "minskillmasterwork", 22);
-			Scribe_Values.Look(ref minSkillLegendary, "minskilllegendary", 23);
+			Scribe_Values.Look(ref minSkillLegendary, "minskilllegendary", 19);
+			Scribe_Values.Look(ref legendaryChance, "legendarychance", 5);
 		}	
 		
 		public void DoWindowContents(Rect inRect)
@@ -59,10 +62,15 @@ namespace CraftingQualityRebalanced
 				minSkillExcellent = (int) list.Slider(minSkillExcellent, minSkillGood + 1, minSkillMasterwork - 1);
 				
 				list.Label("CraftingQualityRebalanced.MinimumSkillMasterwork".Translate() + minSkillMasterwork);
-				minSkillMasterwork = (int) list.Slider(minSkillMasterwork, 7, minSkillLegendary - 1);
+				minSkillMasterwork = (int) list.Slider(minSkillMasterwork, 7, 21);
 				
 				list.Label("CraftingQualityRebalanced.MinimumSkillLegendary".Translate() + minSkillLegendary);
-				minSkillLegendary = (int) list.Slider(minSkillLegendary, minSkillMasterwork + 1, 23);
+				minSkillLegendary = (int) list.Slider(minSkillLegendary, 0, 21);
+				
+				list.Label("CraftingQualityRebalanced.LegendaryChance".Translate() + legendaryChance + "%");
+				legendaryChance = (int) list.Slider(legendaryChance, 0, 100);
+				
+				list.Label("CraftingQualityRebalanced.LegendaryChanceExplanation".Translate());
 				
 				list.End();
 			}

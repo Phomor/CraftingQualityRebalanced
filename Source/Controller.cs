@@ -54,7 +54,10 @@ namespace CraftingQualityRebalanced
 			HarmonyPatches.minSkillExcellent = settings.minSkillExcellent;
 			HarmonyPatches.minSkillGood = settings.minSkillGood;
 			HarmonyPatches.minSkillNormal = settings.minSkillNormal;
-			HarmonyPatches.minSkillPoor = settings.minSkillPoor;	
+			HarmonyPatches.minSkillPoor = settings.minSkillPoor;
+			HarmonyPatches.legendaryChanceAt20 = (float)(settings.legendaryChance / 100f);
+			if(HarmonyPatches.minSkillLegendary != 21)
+				HarmonyPatches.gradientLegendary = (float)(HarmonyPatches.legendaryChanceAt20/(20 - (HarmonyPatches.minSkillLegendary - 1)));
 		}
 	}
 }

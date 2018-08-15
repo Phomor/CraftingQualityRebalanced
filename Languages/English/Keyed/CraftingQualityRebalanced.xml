@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 	<CraftingQualityRebalanced>Crafting Quality Rebalanced</CraftingQualityRebalanced>
-	<CraftingQualityRebalanced.SliderWarning>Sliders are dependent on the values of the qualities above and below, try moving those if you can't move one.</CraftingQualityRebalanced.SliderWarning>
-	<CraftingQualityRebalanced.MinimumSkillPoor>Minimum Skill for at least Poor Item Quality: </CraftingQualityRebalanced.MinimumSkillPoor>
-	<CraftingQualityRebalanced.MinimumSkillNormal>Minimum Skill for at least Normal Item Quality: </CraftingQualityRebalanced.MinimumSkillNormal>
-	<CraftingQualityRebalanced.MinimumSkillGood>Minimum Skill for at least Good Item Quality: </CraftingQualityRebalanced.MinimumSkillGood>
-	<CraftingQualityRebalanced.MinimumSkillExcellent>Minimum Skill for at least Excellent Item Quality, set above 20 to deactivate: </CraftingQualityRebalanced.MinimumSkillExcellent>
-	<CraftingQualityRebalanced.MinimumSkillMasterwork>Minimum Skill for at least Masterwork Item Quality, set above 20 to deactivate: </CraftingQualityRebalanced.MinimumSkillMasterwork>
-	<CraftingQualityRebalanced.MinimumSkillLegendary>Minimum Skill for Legendary Item Quality, set above 20 to deactivate: </CraftingQualityRebalanced.MinimumSkillLegendary>
+	<CraftingQualityRebalanced.SliderWarning>Sliders are often dependent on the values of the qualities above and below, try moving those if you can't move one.</CraftingQualityRebalanced.SliderWarning>
+	<CraftingQualityRebalanced.MinimumSkillPoor>Minimum skill for at least poor item quality: </CraftingQualityRebalanced.MinimumSkillPoor>
+	<CraftingQualityRebalanced.MinimumSkillNormal>Minimum skill for at least normal item quality: </CraftingQualityRebalanced.MinimumSkillNormal>
+	<CraftingQualityRebalanced.MinimumSkillGood>Minimum skill for at least good item quality: </CraftingQualityRebalanced.MinimumSkillGood>
+	<CraftingQualityRebalanced.MinimumSkillExcellent>Minimum skill for at least excellent item quality, set above 20 to deactivate: </CraftingQualityRebalanced.MinimumSkillExcellent>
+	<CraftingQualityRebalanced.MinimumSkillMasterwork>Minimum skill for at least masterwork item quality, set above 20 to deactivate: </CraftingQualityRebalanced.MinimumSkillMasterwork>
+	<CraftingQualityRebalanced.MinimumSkillLegendary>Minimum skill for a chance at legendary ltem quality, set above 20 to deactivate: </CraftingQualityRebalanced.MinimumSkillLegendary>
+	<CraftingQualityRebalanced.LegendaryChance>Chance for legendary item quality at skill 20: </CraftingQualityRebalanced.LegendaryChance>
+	<CraftingQualityRebalanced.LegendaryChanceExplanation>Legendary item chance scales linearly from 20 to the skilllevel that is set as minimum for legendary.</CraftingQualityRebalanced.LegendaryChanceExplanation>
 </LanguageData>

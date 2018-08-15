@@ -7,5 +7,7 @@
 	<CraftingQualityRebalanced.MinimumSkillGood>Minimale Stufe für mindestens gute Gegenstandsqualität: </CraftingQualityRebalanced.MinimumSkillGood>
 	<CraftingQualityRebalanced.MinimumSkillExcellent>Minimale Stufe für mindestens exzellente Gegenstandsqualität, deaktiviert wenn Wert über 20: </CraftingQualityRebalanced.MinimumSkillExcellent>
 	<CraftingQualityRebalanced.MinimumSkillMasterwork>Minimale Stufe für mindestens meisterliche Gegenstandsqualität, deaktiviert wenn Wert über 20: </CraftingQualityRebalanced.MinimumSkillMasterwork>
-	<CraftingQualityRebalanced.MinimumSkillLegendary>Minimale Stufe für legendäre Gegenstandsqualität, deaktiviert wenn Wert über 20: </CraftingQualityRebalanced.MinimumSkillLegendary>
+	<CraftingQualityRebalanced.MinimumSkillLegendary>Minimale Stufe für eine Chance auf legendäre Gegenstandsqualität, deaktiviert wenn Wert über 20: </CraftingQualityRebalanced.MinimumSkillLegendary>
+	<CraftingQualityRebalanced.LegendaryChance>Chance für legendäre Gegenstandsqualität auf Stufe 20: </CraftingQualityRebalanced.LegendaryChance>
+	<CraftingQualityRebalanced.LegendaryChanceExplanation>Chance für legendäre Gegenstandsqualität skaliert linear von 20 bis zu der Stufe, die als Minimum für legendäre Qualität gesetzt ist.</CraftingQualityRebalanced.LegendaryChanceExplanation>
 </LanguageData>
