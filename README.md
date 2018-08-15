@@ -1,7 +1,7 @@
-Crafting Quality Rebalanced 1.3
+Crafting Quality Rebalanced 1.4
 
 Requirements:
-Rimworld 1.0
+Rimworld 0.19
 
 Could maybe work on other versions, but wasn't tested on any other.
 
