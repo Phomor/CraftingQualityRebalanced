@@ -1,4 +1,4 @@
-Crafting Quality Rebalanced 1.5
+Crafting Quality Rebalanced 1.4.1
 
 Requirements:
 Rimworld 0.19
