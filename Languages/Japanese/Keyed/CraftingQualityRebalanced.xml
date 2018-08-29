@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CraftingQualityRebalanced>Crafting Quality Rebalanced</CraftingQualityRebalanced>
+  <CraftingQualityRebalanced.SliderWarning>スライダーの可動範囲は、時々上と下の品質のスキル値に依存しますが、もし移動できない場合はスライダーを直接移動してみてください。</CraftingQualityRebalanced.SliderWarning>
+  <CraftingQualityRebalanced.MinimumSkillPoor>少なくとも低品質になる最低スキルレベル：</CraftingQualityRebalanced.MinimumSkillPoor>
+  <CraftingQualityRebalanced.MinimumSkillNormal>少なくとも標準品になる最低スキルレベル：</CraftingQualityRebalanced.MinimumSkillNormal>
+  <CraftingQualityRebalanced.MinimumSkillGood>少なくとも良品になる最低スキルレベル：</CraftingQualityRebalanced.MinimumSkillGood>
+  <CraftingQualityRebalanced.MinimumSkillExcellent>少なくとも優秀品になる最低スキルレベル、無効にするには20を超えて設定してください：</CraftingQualityRebalanced.MinimumSkillExcellent>
+  <CraftingQualityRebalanced.MinimumSkillMasterwork>少なくとも名品になる最低スキルレベル、無効にするには20を超えて設定してください：</CraftingQualityRebalanced.MinimumSkillMasterwork>
+  <CraftingQualityRebalanced.MinimumSkillLegendary>少なくとも幻の一品になる最低スキルレベル、無効にするには20を超えて設定してください：</CraftingQualityRebalanced.MinimumSkillLegendary>
+  <CraftingQualityRebalanced.LegendaryChance>スキル20で幻品質のアイテムが生まれる確率：</CraftingQualityRebalanced.LegendaryChance>
+  <CraftingQualityRebalanced.LegendaryChanceExplanation>幻品質のアイテムの生まれる確率は20から、少なくとも幻の一品になる最低スキルレベルまで直線的に増加します。</CraftingQualityRebalanced.LegendaryChanceExplanation>
+
+</LanguageData>
