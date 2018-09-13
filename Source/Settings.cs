@@ -25,7 +25,6 @@ namespace CraftingQualityRebalanced
 		public int minSkillExcellent = 21;
 		public int minSkillMasterwork = 22;
 		public int minSkillLegendary = 19;
-		//public int masterworkChance = 10;
 		public int legendaryChance = 5;
 		
 		public override void ExposeData()
