@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<CraftingQualityRebalanced>Crafting Quality Rebalanced</CraftingQualityRebalanced>
+	<CraftingQualityRebalanced.SliderWarning>Los controles deslizantes a menudo dependen de los valores de calidad por encima y por debajo, intenta moverlos si no puedes mover uno.</CraftingQualityRebalanced.SliderWarning>
+	<CraftingQualityRebalanced.MinimumSkillPoor>Habilidad mínima para al menos una calidad mediocre de los productos: </CraftingQualityRebalanced.MinimumSkillPoor>
+	<CraftingQualityRebalanced.MinimumSkillNormal>Habilidad mínima para al menos una calidad normal de los productos: </CraftingQualityRebalanced.MinimumSkillNormal>
+	<CraftingQualityRebalanced.MinimumSkillGood>Habilidad mínima para al menos una calidad buena de los productos: </CraftingQualityRebalanced.MinimumSkillGood>
+	<CraftingQualityRebalanced.MinimumSkillExcellent>Habilidad mínima para al menos una calidad excelente de los productos, Fijar por encima de 20 para desactivar: </CraftingQualityRebalanced.MinimumSkillExcellent>
+	<CraftingQualityRebalanced.MinimumSkillMasterwork>Habilidad mínima para al menos una calidad magistral de los productos, Fijar por encima de 20 para desactivar: </CraftingQualityRebalanced.MinimumSkillMasterwork>
+	<CraftingQualityRebalanced.MinimumSkillLegendary>Habilidad mínima para al menos una calidad legendaria de los productos, Fijar por encima de 20 para desactivar: </CraftingQualityRebalanced.MinimumSkillLegendary>
+	<CraftingQualityRebalanced.LegendaryChance>Probabilidad de obtener una calidad legendaria con habilidad 20: </CraftingQualityRebalanced.LegendaryChance>
+	<CraftingQualityRebalanced.LegendaryChanceExplanation>La probabilidad de productos legendarios escala linealmente desde 20 hasta el nivel de habilidad que se establece como mínimo para ser legendario.</CraftingQualityRebalanced.LegendaryChanceExplanation>
+</LanguageData>
