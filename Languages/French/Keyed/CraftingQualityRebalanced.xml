@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<CraftingQualityRebalanced>Qualite des constructions reequilibree</CraftingQualityRebalanced>
+	<CraftingQualityRebalanced.SliderWarning>Les curseurs dependent souvent des valeurs au dessus et en dessous, essayez de deplacer les autres si vous ne pouvez pas en bouger un.</CraftingQualityRebalanced.SliderWarning>
+	<CraftingQualityRebalanced.MinimumSkillPoor>Niveau de competence minimum pour un objet que qualite au moins "pauvre": </CraftingQualityRebalanced.MinimumSkillPoor>
+	<CraftingQualityRebalanced.MinimumSkillNormal>Niveau de competence minimum pour un objet que qualite au moins "normal": </CraftingQualityRebalanced.MinimumSkillNormal>
+	<CraftingQualityRebalanced.MinimumSkillGood>Niveau de competence minimum pour un objet que qualite au moins "bon": </CraftingQualityRebalanced.MinimumSkillGood>
+	<CraftingQualityRebalanced.MinimumSkillExcellent>Niveau de competence minimum pour un objet que qualite au moins "excellent", pour desactiver mettre plus que 20: </CraftingQualityRebalanced.MinimumSkillExcellent>
+	<CraftingQualityRebalanced.MinimumSkillMasterwork>Niveau de competence minimum pour un objet que qualite au moins "chef-d'oeuvres", pour desactiver mettre plus que 20: </CraftingQualityRebalanced.MinimumSkillMasterwork>
+	<CraftingQualityRebalanced.MinimumSkillLegendary>Niveau de competence minimum pour avoir une chance de faire un objet "legendaire", pour desactiver mettre plus que 20: </CraftingQualityRebalanced.MinimumSkillLegendary>
+	<CraftingQualityRebalanced.LegendaryChance>Chance de faire un objet "legendaire" au niveau 20: </CraftingQualityRebalanced.LegendaryChance>
+	<CraftingQualityRebalanced.LegendaryChanceExplanation>La probabilitee est definie par ce nombre au niveau 20 et par le niveau minimum possible pour en faire un.</CraftingQualityRebalanced.LegendaryChanceExplanation>
+
+</LanguageData>
