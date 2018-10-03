@@ -61,7 +61,7 @@ namespace CraftingQualityRebalanced
 				minSkillExcellent = (int) list.Slider(minSkillExcellent, minSkillGood + 1, minSkillMasterwork - 1);
 				
 				list.Label("CraftingQualityRebalanced.MinimumSkillMasterwork".Translate() + minSkillMasterwork);
-				minSkillMasterwork = (int) list.Slider(minSkillMasterwork, 7, 21);
+				minSkillMasterwork = (int) list.Slider(minSkillMasterwork, 7, 22);
 				
 				list.Label("CraftingQualityRebalanced.MinimumSkillLegendary".Translate() + minSkillLegendary);
 				minSkillLegendary = (int) list.Slider(minSkillLegendary, 0, 21);
@@ -70,6 +70,24 @@ namespace CraftingQualityRebalanced
 				legendaryChance = (int) list.Slider(legendaryChance, 0, 100);
 				
 				list.Label("CraftingQualityRebalanced.LegendaryChanceExplanation".Translate());
+				
+				if(minSkillExcellent >= minSkillMasterwork)
+				{
+					minSkillExcellent = minSkillMasterwork - 1;
+				}
+				if(minSkillGood >= minSkillExcellent)
+				{
+					minSkillGood = minSkillExcellent - 1;
+				}
+				if(minSkillNormal >= minSkillGood)
+				{
+					minSkillNormal = minSkillGood - 1;
+				}
+				if(minSkillPoor >= minSkillNormal)
+				{
+					minSkillPoor = minSkillNormal - 1;
+				}
+				
 				
 				list.End();
 			}
