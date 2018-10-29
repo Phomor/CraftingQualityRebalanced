@@ -26,6 +26,8 @@ namespace CraftingQualityRebalanced
 		public int minSkillMasterwork = 22;
 		public int minSkillLegendary = 19;
 		public int legendaryChance = 5;
+		public bool supressMasterworkMessages = false;
+		public bool supressLegendaryMessages = false;
 		
 		public override void ExposeData()
 		{
@@ -37,6 +39,8 @@ namespace CraftingQualityRebalanced
 			Scribe_Values.Look(ref minSkillMasterwork, "minskillmasterwork", 22);
 			Scribe_Values.Look(ref minSkillLegendary, "minskilllegendary", 19);
 			Scribe_Values.Look(ref legendaryChance, "legendarychance", 5);
+			Scribe_Values.Look(ref supressMasterworkMessages, "supressmasterworkmessages", false);
+			Scribe_Values.Look(ref supressLegendaryMessages, "supresslegendarymessages", false);
 		}	
 		
 		public void DoWindowContents(Rect inRect)
@@ -71,6 +75,10 @@ namespace CraftingQualityRebalanced
 				
 				list.Label("CraftingQualityRebalanced.LegendaryChanceExplanation".Translate());
 				
+				list.CheckboxLabeledSelectable("CraftingQualityRebalanced.SupressMasterworkMessages".Translate(), ref supressMasterworkMessages, ref supressMasterworkMessages);
+				
+				list.CheckboxLabeledSelectable("CraftingQualityRebalanced.SupressLegendaryMessages".Translate(), ref supressLegendaryMessages, ref supressLegendaryMessages);
+				
 				if(minSkillExcellent >= minSkillMasterwork)
 				{
 					minSkillExcellent = minSkillMasterwork - 1;
@@ -87,7 +95,6 @@ namespace CraftingQualityRebalanced
 				{
 					minSkillPoor = minSkillNormal - 1;
 				}
-				
 				
 				list.End();
 			}

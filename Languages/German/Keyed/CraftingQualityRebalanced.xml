@@ -10,4 +10,6 @@
 	<CraftingQualityRebalanced.MinimumSkillLegendary>Minimale Stufe für eine Chance auf legendäre Gegenstandsqualität, deaktiviert wenn Wert über 20: </CraftingQualityRebalanced.MinimumSkillLegendary>
 	<CraftingQualityRebalanced.LegendaryChance>Chance für legendäre Gegenstandsqualität auf Stufe 20: </CraftingQualityRebalanced.LegendaryChance>
 	<CraftingQualityRebalanced.LegendaryChanceExplanation>Chance für legendäre Gegenstandsqualität skaliert linear von 20 bis zu der Stufe, die als Minimum für legendäre Qualität gesetzt ist.</CraftingQualityRebalanced.LegendaryChanceExplanation>
+	<CraftingQualityRebalanced.SupressMasterworkMessages>Nachricht wenn ein meisterlicher Gegenstand gemacht wird unterdrücken?</CraftingQualityRebalanced.SupressMasterworkMessages>
+	<CraftingQualityRebalanced.SupressLegendaryMessages>Nachricht wenn ein legendärer Gegenstand gemacht wird unterdrücken?</CraftingQualityRebalanced.SupressLegendaryMessages>
 </LanguageData>

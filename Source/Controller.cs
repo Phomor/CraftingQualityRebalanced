@@ -29,9 +29,12 @@ namespace CraftingQualityRebalanced
 		public Controller(ModContentPack content) : base (content)
 		{
 			var harmony = HarmonyInstance.Create("rimworld.phomor.craftingqualityrebalanced");
-			var original = typeof(QualityUtility).GetMethod("GenerateQualityCreatedByPawn", new Type[] { typeof(int), typeof(bool) });
+			var redoQuality = typeof(QualityUtility).GetMethod("GenerateQualityCreatedByPawn", new Type[] { typeof(int), typeof(bool) });
 			var postfix = typeof(HarmonyPatches).GetMethod("Postfix");
-			harmony.Patch(original, null, new HarmonyMethod(postfix));
+			harmony.Patch(redoQuality, null, new HarmonyMethod(postfix));
+			var supressMessages = typeof(QualityUtility).GetMethod("SendCraftNotification");
+			var prefix = typeof(HarmonyPatches).GetMethod("Prefix");
+			harmony.Patch(supressMessages, new HarmonyMethod(prefix), null);
 			settings = GetSettings<Settings>();
 			updatePatches();
 		}
@@ -58,6 +61,8 @@ namespace CraftingQualityRebalanced
 			HarmonyPatches.legendaryChanceAt20 = (float)(settings.legendaryChance / 100f);
 			if(HarmonyPatches.minSkillLegendary != 21)
 				HarmonyPatches.gradientLegendary = (float)(HarmonyPatches.legendaryChanceAt20/(20 - (HarmonyPatches.minSkillLegendary - 1)));
+			HarmonyPatches.supressMasterwork = settings.supressMasterworkMessages;
+			HarmonyPatches.supressLegendary = settings.supressLegendaryMessages;
 		}
 	}
 }

@@ -10,4 +10,6 @@
 	<CraftingQualityRebalanced.MinimumSkillLegendary>Minimum skill for a chance at legendary ltem quality, set above 20 to deactivate: </CraftingQualityRebalanced.MinimumSkillLegendary>
 	<CraftingQualityRebalanced.LegendaryChance>Chance for legendary item quality at skill 20: </CraftingQualityRebalanced.LegendaryChance>
 	<CraftingQualityRebalanced.LegendaryChanceExplanation>Legendary item chance scales linearly from 20 to the skilllevel that is set as minimum for legendary.</CraftingQualityRebalanced.LegendaryChanceExplanation>
+	<CraftingQualityRebalanced.SupressMasterworkMessages>Supress the message when a masterwork item is made?</CraftingQualityRebalanced.SupressMasterworkMessages>
+	<CraftingQualityRebalanced.SupressLegendaryMessages>Supress the message when a legendary item is made?</CraftingQualityRebalanced.SupressLegendaryMessages>
 </LanguageData>

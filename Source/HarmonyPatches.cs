@@ -27,6 +27,8 @@ namespace CraftingQualityRebalanced
 		public static int minSkillPoor = 9;
 		public static float legendaryChanceAt20 = 0.05f;
 		public static float gradientLegendary = 0.025f;
+		public static bool supressMasterwork = false;
+		public static bool supressLegendary = false;
 		
     	[HarmonyPostfix]
 		public static void Postfix(ref int relevantSkillLevel, ref bool inspired, ref QualityCategory __result)
@@ -55,6 +57,21 @@ namespace CraftingQualityRebalanced
 			{
 				__result = QualityUtility.GenerateQualityCreatedByPawn(relevantSkillLevel, inspired);
 			}
+		}
+		
+		[HarmonyPrefix]
+		public static bool Prefix(ref Thing thing)
+		{
+			CompQuality compQuality = thing.TryGetComp<CompQuality>();
+			if(compQuality != null) {
+				if(compQuality.Quality == QualityCategory.Masterwork && supressMasterwork) {
+					return false;
+				}
+				else if(compQuality.Quality == QualityCategory.Legendary && supressLegendary) {
+					return false;
+				}
+			}
+			return true;
 		}
 	}
 }
