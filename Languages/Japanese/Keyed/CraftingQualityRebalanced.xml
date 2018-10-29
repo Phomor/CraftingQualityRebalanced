@@ -10,5 +10,7 @@
   <CraftingQualityRebalanced.MinimumSkillLegendary>少なくとも幻の一品になる最低スキルレベル、無効にするには20を超えて設定してください：</CraftingQualityRebalanced.MinimumSkillLegendary>
   <CraftingQualityRebalanced.LegendaryChance>スキル20で幻品質のアイテムが生まれる確率：</CraftingQualityRebalanced.LegendaryChance>
   <CraftingQualityRebalanced.LegendaryChanceExplanation>幻品質のアイテムの生まれる確率は20から、少なくとも幻の一品になる最低スキルレベルまで直線的に増加します。</CraftingQualityRebalanced.LegendaryChanceExplanation>
+  <CraftingQualityRebalanced.SupressMasterworkMessages>名品質のアイテムが作成されたときのメッセージを抑制しますか？</CraftingQualityRebalanced.SupressMasterworkMessages>
+  <CraftingQualityRebalanced.SupressLegendaryMessages>幻品質のアイテムが作成されたときのメッセージを抑制しますか？</CraftingQualityRebalanced.SupressLegendaryMessages>
 
 </LanguageData>
