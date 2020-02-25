@@ -10,7 +10,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Reflection;
-using Harmony;
+using HarmonyLib;
 using UnityEngine;
 using Verse;
 using RimWorld;
@@ -28,7 +28,7 @@ namespace CraftingQualityRebalanced
 		
 		public Controller(ModContentPack content) : base (content)
 		{
-			var harmony = HarmonyInstance.Create("rimworld.phomor.craftingqualityrebalanced");
+			var harmony = new Harmony("rimworld.phomor.craftingqualityrebalanced");
 			var redoQuality = typeof(QualityUtility).GetMethod("GenerateQualityCreatedByPawn", new Type[] { typeof(int), typeof(bool) });
 			var postfix = typeof(HarmonyPatches).GetMethod("Postfix");
 			harmony.Patch(redoQuality, null, new HarmonyMethod(postfix));
@@ -36,7 +36,7 @@ namespace CraftingQualityRebalanced
 			var prefix = typeof(HarmonyPatches).GetMethod("Prefix");
 			harmony.Patch(supressMessages, new HarmonyMethod(prefix), null);
 			settings = GetSettings<Settings>();
-			updatePatches();
+			UpdatePatches();
 		}
 		
 		public override string SettingsCategory()
@@ -47,20 +47,18 @@ namespace CraftingQualityRebalanced
 		public override void DoSettingsWindowContents(Rect inRect)
 		{
 			settings.DoWindowContents(inRect);
-			updatePatches();
+			UpdatePatches();
 		}
 		
-		public void updatePatches()
+		public void UpdatePatches()
 		{
-			HarmonyPatches.minSkillLegendary = settings.minSkillLegendary;
-			HarmonyPatches.minSkillMasterwork = settings.minSkillMasterwork;
-			HarmonyPatches.minSkillExcellent = settings.minSkillExcellent;
-			HarmonyPatches.minSkillGood = settings.minSkillGood;
-			HarmonyPatches.minSkillNormal = settings.minSkillNormal;
-			HarmonyPatches.minSkillPoor = settings.minSkillPoor;
+			foreach (QualityCategory qc in Enum.GetValues(typeof(QualityCategory)))
+			{
+				HarmonyPatches.minSkill[(int)qc] = settings.GetSkillValue(qc);
+			}
 			HarmonyPatches.legendaryChanceAt20 = (float)(settings.legendaryChance / 100f);
-			if(HarmonyPatches.minSkillLegendary != 21)
-				HarmonyPatches.gradientLegendary = (float)(HarmonyPatches.legendaryChanceAt20/(20 - (HarmonyPatches.minSkillLegendary - 1)));
+			if(HarmonyPatches.minSkill[(int)QualityCategory.Legendary] != 21)
+				HarmonyPatches.gradientLegendary = (float)(HarmonyPatches.legendaryChanceAt20 /(20 - (HarmonyPatches.minSkill[(int)QualityCategory.Legendary] - 1)));
 			HarmonyPatches.supressMasterwork = settings.supressMasterworkMessages;
 			HarmonyPatches.supressLegendary = settings.supressLegendaryMessages;
 		}

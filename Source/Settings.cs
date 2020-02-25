@@ -10,34 +10,66 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Reflection;
-using Harmony;
+using HarmonyLib;
 using UnityEngine;
 using Verse;
 using RimWorld;
 
 namespace CraftingQualityRebalanced
 {
-	public class Settings : Verse.ModSettings
+	public class Settings : ModSettings
 	{
-		public int minSkillPoor = 9;
-		public int minSkillNormal = 13;
-		public int minSkillGood = 17;
-		public int minSkillExcellent = 21;
-		public int minSkillMasterwork = 22;
-		public int minSkillLegendary = 19;
+		private int[] skills = new int[] { 0, 9, 13, 17, 21, 22, 19};
 		public int legendaryChance = 5;
 		public bool supressMasterworkMessages = false;
 		public bool supressLegendaryMessages = false;
-		
+
+		public int GetSkillValue(QualityCategory qc) => this.skills[(int)qc];
+		private void SetSkillValue(QualityCategory qc, int value)
+		{
+			if(qc > QualityCategory.Awful && qc < QualityCategory.Legendary)
+			{
+				// If qc == poor then dont go in there so poor can be 0
+				if(qc != QualityCategory.Poor && value <= skills[(int)qc - 1])
+				{
+					skills[(int)qc] = skills[(int)qc - 1] + 1;
+				}
+				// if qc == masterwork then dont go in there so masterwork doesnt clash with legendary
+				else if (qc != QualityCategory.Masterwork && value >= skills[(int)qc + 1])
+				{
+					skills[(int)qc] = skills[(int)qc + 1] - 1;
+				}
+				else
+				{
+					skills[(int)qc] = value;
+				}
+			} else
+			{
+				skills[(int)qc] = value;
+			}
+		}
+
+
 		public override void ExposeData()
 		{
+			if (skills[2] < 1)
+				skills[2] = 1;
+			if (skills[3] < 4)
+				skills[3] = 4;
+			if (skills[4] < 8)
+				skills[4] = 8;
+			if (skills[5] < 16)
+				skills[5] = 16;
+
 			base.ExposeData();
-			Scribe_Values.Look(ref minSkillPoor, "minskillpoor", 9);
-			Scribe_Values.Look(ref minSkillNormal, "minskillnormal", 13);
-			Scribe_Values.Look(ref minSkillGood, "minskillgood", 17);
-			Scribe_Values.Look(ref minSkillExcellent, "minskillexcellent", 21);
-			Scribe_Values.Look(ref minSkillMasterwork, "minskillmasterwork", 22);
-			Scribe_Values.Look(ref minSkillLegendary, "minskilllegendary", 19);
+
+			Scribe_Values.Look(ref skills[0], "minskillawful", 0);
+			Scribe_Values.Look(ref skills[1], "minskillpoor", 9);
+			Scribe_Values.Look(ref skills[2], "minskillnormal", 13);
+			Scribe_Values.Look(ref skills[3], "minskillgood", 17);
+			Scribe_Values.Look(ref skills[4], "minskillexcellent", 21);
+			Scribe_Values.Look(ref skills[5], "minskillmasterwork", 22);
+			Scribe_Values.Look(ref skills[6], "minskilllegendary", 19);
 			Scribe_Values.Look(ref legendaryChance, "legendarychance", 5);
 			Scribe_Values.Look(ref supressMasterworkMessages, "supressmasterworkmessages", false);
 			Scribe_Values.Look(ref supressLegendaryMessages, "supresslegendarymessages", false);
@@ -47,54 +79,38 @@ namespace CraftingQualityRebalanced
 		{
 			{
 				var list = new Listing_Standard();
-				Color defaultColor = GUI.color;
 				list.Begin(inRect);
 				
 				list.Label("CraftingQualityRebalanced.SliderWarning".Translate());
 				
-				list.Label("CraftingQualityRebalanced.MinimumSkillPoor".Translate() + minSkillPoor);
-				minSkillPoor = (int) list.Slider(minSkillPoor, 0, minSkillNormal - 1);
+				list.Label("CraftingQualityRebalanced.MinimumSkillPoor".Translate() + GetSkillValue(QualityCategory.Poor));
+				SetSkillValue(QualityCategory.Poor, (int)list.Slider(GetSkillValue(QualityCategory.Poor), 0, 20));
 			
-				list.Label("CraftingQualityRebalanced.MinimumSkillNormal".Translate() + minSkillNormal);
-				minSkillNormal = (int) list.Slider(minSkillNormal, minSkillPoor + 1, minSkillGood - 1);
+				list.Label("CraftingQualityRebalanced.MinimumSkillNormal".Translate() + GetSkillValue(QualityCategory.Normal));
+				SetSkillValue(QualityCategory.Normal, (int) list.Slider(GetSkillValue(QualityCategory.Normal), 1, 20));
 			
-				list.Label("CraftingQualityRebalanced.MinimumSkillGood".Translate() + minSkillGood);
-				minSkillGood = (int) list.Slider(minSkillGood, minSkillNormal + 1, minSkillExcellent - 1);
+				list.Label("CraftingQualityRebalanced.MinimumSkillGood".Translate() + GetSkillValue(QualityCategory.Good));
+				SetSkillValue(QualityCategory.Good, (int) list.Slider(GetSkillValue(QualityCategory.Good), 4, 20));
 				
-				list.Label("CraftingQualityRebalanced.MinimumSkillExcellent".Translate() + minSkillExcellent);
-				minSkillExcellent = (int) list.Slider(minSkillExcellent, minSkillGood + 1, minSkillMasterwork - 1);
+				list.Label("CraftingQualityRebalanced.MinimumSkillExcellent".Translate() + GetSkillValue(QualityCategory.Excellent));
+				SetSkillValue(QualityCategory.Excellent, (int) list.Slider(GetSkillValue(QualityCategory.Excellent), 8, 21));
 				
-				list.Label("CraftingQualityRebalanced.MinimumSkillMasterwork".Translate() + minSkillMasterwork);
-				minSkillMasterwork = (int) list.Slider(minSkillMasterwork, 7, 22);
+				list.Label("CraftingQualityRebalanced.MinimumSkillMasterwork".Translate() + GetSkillValue(QualityCategory.Masterwork));
+				SetSkillValue(QualityCategory.Masterwork, (int) list.Slider(GetSkillValue(QualityCategory.Masterwork), 16, 22));
 				
-				list.Label("CraftingQualityRebalanced.MinimumSkillLegendary".Translate() + minSkillLegendary);
-				minSkillLegendary = (int) list.Slider(minSkillLegendary, 0, 21);
+				list.Label("CraftingQualityRebalanced.MinimumSkillLegendary".Translate() + GetSkillValue(QualityCategory.Legendary));
+				SetSkillValue(QualityCategory.Legendary, (int) list.Slider(GetSkillValue(QualityCategory.Legendary), 0, 21));
 				
 				list.Label("CraftingQualityRebalanced.LegendaryChance".Translate() + legendaryChance + "%");
 				legendaryChance = (int) list.Slider(legendaryChance, 0, 100);
-				
+
 				list.Label("CraftingQualityRebalanced.LegendaryChanceExplanation".Translate());
+
+				list.Gap();
 				
 				list.CheckboxLabeledSelectable("CraftingQualityRebalanced.SupressMasterworkMessages".Translate(), ref supressMasterworkMessages, ref supressMasterworkMessages);
 				
 				list.CheckboxLabeledSelectable("CraftingQualityRebalanced.SupressLegendaryMessages".Translate(), ref supressLegendaryMessages, ref supressLegendaryMessages);
-				
-				if(minSkillExcellent >= minSkillMasterwork)
-				{
-					minSkillExcellent = minSkillMasterwork - 1;
-				}
-				if(minSkillGood >= minSkillExcellent)
-				{
-					minSkillGood = minSkillExcellent - 1;
-				}
-				if(minSkillNormal >= minSkillGood)
-				{
-					minSkillNormal = minSkillGood - 1;
-				}
-				if(minSkillPoor >= minSkillNormal)
-				{
-					minSkillPoor = minSkillNormal - 1;
-				}
 				
 				list.End();
 			}
