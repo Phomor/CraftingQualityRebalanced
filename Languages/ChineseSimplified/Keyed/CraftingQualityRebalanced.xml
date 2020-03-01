@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CraftingQualityRebalanced>工艺品质调整</CraftingQualityRebalanced>
+  <CraftingQualityRebalanced.SliderWarning>各个滑动条存在关联依赖关系，当你无法滑动其中一个时，请尝试更改其余数值。</CraftingQualityRebalanced.SliderWarning>
+  <CraftingQualityRebalanced.MinimumSkillPoor>作品品质最低为较差的技能等级: </CraftingQualityRebalanced.MinimumSkillPoor>
+  <CraftingQualityRebalanced.MinimumSkillNormal>作品品质最低为一般的技能等级: </CraftingQualityRebalanced.MinimumSkillNormal>
+  <CraftingQualityRebalanced.MinimumSkillGood>作品品质最低为良好的技能等级: </CraftingQualityRebalanced.MinimumSkillGood>
+  <CraftingQualityRebalanced.MinimumSkillExcellent>作品品质最低为极佳的技能等级，设为20以上则此设置无效: </CraftingQualityRebalanced.MinimumSkillExcellent>
+  <CraftingQualityRebalanced.MinimumSkillMasterwork>作品品质最低为大师的技能等级，设为20以上则此设置无效: </CraftingQualityRebalanced.MinimumSkillMasterwork>
+  <CraftingQualityRebalanced.MinimumSkillLegendary>作品品质最低为传奇的技能等级，设为20以上则此设置无效: </CraftingQualityRebalanced.MinimumSkillLegendary>
+  <CraftingQualityRebalanced.LegendaryChance>20级技能制作出传奇级作品的几率: </CraftingQualityRebalanced.LegendaryChance>
+  <CraftingQualityRebalanced.LegendaryChanceExplanation>传奇级作品出现的几率基于技能等级呈线性上升，到达20级时，最低几率为上方滑块设定的数值。</CraftingQualityRebalanced.LegendaryChanceExplanation>
+  <CraftingQualityRebalanced.SupressMasterworkMessages>不显示大师级作品的通知消息</CraftingQualityRebalanced.SupressMasterworkMessages>
+  <CraftingQualityRebalanced.SupressLegendaryMessages>不显示传奇级作品的通知消息</CraftingQualityRebalanced.SupressLegendaryMessages>
+
+</LanguageData>
