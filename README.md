@@ -1,9 +1,7 @@
-Crafting Quality Rebalanced 1.4.6
+Crafting Quality Rebalanced 1.4.11
 
 Requirements:
-Rimworld 1.0
-
-Could maybe work on other versions, but wasn't tested on any other.
+Rimworld 1.0 to 1.3
 
 Features:
 High Skill Colonists can't craft or build bad Quality items anymore.
