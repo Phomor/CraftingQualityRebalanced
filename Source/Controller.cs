@@ -61,6 +61,7 @@ namespace CraftingQualityRebalanced
 				HarmonyPatches.gradientLegendary = (float)(HarmonyPatches.legendaryChanceAt20 /(20 - (HarmonyPatches.minSkill[(int)QualityCategory.Legendary] - 1)));
 			HarmonyPatches.supressMasterwork = settings.supressMasterworkMessages;
 			HarmonyPatches.supressLegendary = settings.supressLegendaryMessages;
+			HarmonyPatches.setQualityInsteadOfReroll = settings.setQualityInsteadOfReroll;
 		}
 	}
 }

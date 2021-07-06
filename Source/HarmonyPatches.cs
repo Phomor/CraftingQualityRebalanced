@@ -24,6 +24,7 @@ namespace CraftingQualityRebalanced
 		public static float gradientLegendary = 0.025f;
 		public static bool supressMasterwork = false;
 		public static bool supressLegendary = false;
+		public static bool setQualityInsteadOfReroll = false;
 
 		[HarmonyPostfix]
 		public static void Postfix(ref int relevantSkillLevel, ref bool inspired, ref QualityCategory __result)
@@ -36,23 +37,57 @@ namespace CraftingQualityRebalanced
 				}
 				else if (relevantSkillLevel >= minSkill[(int)QualityCategory.Masterwork] && __result < QualityCategory.Masterwork)
 				{
-					__result = QualityUtility.GenerateQualityCreatedByPawn(relevantSkillLevel, inspired);
+					if (setQualityInsteadOfReroll)
+                    {
+						__result = QualityCategory.Masterwork;
+                    } else
+					{
+						__result = QualityUtility.GenerateQualityCreatedByPawn(relevantSkillLevel, inspired);
+					}
 				}
 				else if (relevantSkillLevel >= minSkill[(int)QualityCategory.Excellent] && __result < QualityCategory.Excellent)
 				{
-					__result = QualityUtility.GenerateQualityCreatedByPawn(relevantSkillLevel, inspired);
+					if (setQualityInsteadOfReroll)
+					{
+						__result = QualityCategory.Excellent;
+					}
+					else
+					{
+						__result = QualityUtility.GenerateQualityCreatedByPawn(relevantSkillLevel, inspired);
+					}
 				}
 				else if (relevantSkillLevel >= minSkill[(int)QualityCategory.Good] && __result < QualityCategory.Good)
 				{
-					__result = QualityUtility.GenerateQualityCreatedByPawn(relevantSkillLevel, inspired);
+					if (setQualityInsteadOfReroll)
+					{
+						__result = QualityCategory.Good;
+					}
+					else
+					{
+						__result = QualityUtility.GenerateQualityCreatedByPawn(relevantSkillLevel, inspired);
+					}
 				}
 				else if (relevantSkillLevel >= minSkill[(int)QualityCategory.Normal] && __result < QualityCategory.Normal)
 				{
-					__result = QualityUtility.GenerateQualityCreatedByPawn(relevantSkillLevel, inspired);
+					if (setQualityInsteadOfReroll)
+					{
+						__result = QualityCategory.Normal;
+					}
+					else
+					{
+						__result = QualityUtility.GenerateQualityCreatedByPawn(relevantSkillLevel, inspired);
+					}
 				}
 				else if (relevantSkillLevel >= minSkill[(int)QualityCategory.Poor] && __result < QualityCategory.Poor)
 				{
-					__result = QualityUtility.GenerateQualityCreatedByPawn(relevantSkillLevel, inspired);
+					if (setQualityInsteadOfReroll)
+					{
+						__result = QualityCategory.Poor;
+					}
+					else
+					{
+						__result = QualityUtility.GenerateQualityCreatedByPawn(relevantSkillLevel, inspired);
+					}
 				}
 			}
 			catch(Exception ex)

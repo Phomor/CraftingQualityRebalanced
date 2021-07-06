@@ -23,6 +23,7 @@ namespace CraftingQualityRebalanced
 		public int legendaryChance = 5;
 		public bool supressMasterworkMessages = false;
 		public bool supressLegendaryMessages = false;
+		public bool setQualityInsteadOfReroll = false;
 
 		public int GetSkillValue(QualityCategory qc) => this.skills[(int)qc];
 		private void SetSkillValue(QualityCategory qc, int value)
@@ -73,6 +74,7 @@ namespace CraftingQualityRebalanced
 			Scribe_Values.Look(ref legendaryChance, "legendarychance", 5);
 			Scribe_Values.Look(ref supressMasterworkMessages, "supressmasterworkmessages", false);
 			Scribe_Values.Look(ref supressLegendaryMessages, "supresslegendarymessages", false);
+			Scribe_Values.Look(ref setQualityInsteadOfReroll, "setqualityinsteadofreroll", false);
 		}	
 		
 		public void DoWindowContents(Rect inRect)
@@ -111,7 +113,9 @@ namespace CraftingQualityRebalanced
 				list.CheckboxLabeledSelectable("CraftingQualityRebalanced.SupressMasterworkMessages".Translate(), ref supressMasterworkMessages, ref supressMasterworkMessages);
 				
 				list.CheckboxLabeledSelectable("CraftingQualityRebalanced.SupressLegendaryMessages".Translate(), ref supressLegendaryMessages, ref supressLegendaryMessages);
-				
+
+				list.CheckboxLabeledSelectable("CraftingQualityRebalanced.SetQualityInsteadOfRerolling".Translate(), ref setQualityInsteadOfReroll, ref setQualityInsteadOfReroll);
+
 				list.End();
 			}
 		}
