@@ -12,4 +12,5 @@
 	<CraftingQualityRebalanced.LegendaryChanceExplanation>Chance für legendäre Gegenstandsqualität skaliert linear von 20 bis zu der Stufe, die als Minimum für legendäre Qualität gesetzt ist.</CraftingQualityRebalanced.LegendaryChanceExplanation>
 	<CraftingQualityRebalanced.SupressMasterworkMessages>Nachricht wenn ein meisterlicher Gegenstand gemacht wird unterdrücken?</CraftingQualityRebalanced.SupressMasterworkMessages>
 	<CraftingQualityRebalanced.SupressLegendaryMessages>Nachricht wenn ein legendärer Gegenstand gemacht wird unterdrücken?</CraftingQualityRebalanced.SupressLegendaryMessages>
+  <CraftingQualityRebalanced.SetQualityInsteadOfRerolling>Soll die garantierte Qualität gesetzt werden, anstatt nochmal darum zu würfeln? Bewirkt, dass die Qualitätschancen genauer an den hier eingestellten Chancen ist.</CraftingQualityRebalanced.SetQualityInsteadOfRerolling>
 </LanguageData>
