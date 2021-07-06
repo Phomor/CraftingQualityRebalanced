@@ -12,4 +12,5 @@
 	<CraftingQualityRebalanced.LegendaryChanceExplanation>Legendary item chance scales linearly from 20 to the skilllevel that is set as minimum for legendary.</CraftingQualityRebalanced.LegendaryChanceExplanation>
 	<CraftingQualityRebalanced.SupressMasterworkMessages>Supress the message when a masterwork item is made?</CraftingQualityRebalanced.SupressMasterworkMessages>
 	<CraftingQualityRebalanced.SupressLegendaryMessages>Supress the message when a legendary item is made?</CraftingQualityRebalanced.SupressLegendaryMessages>
+  <CraftingQualityRebalanced.SetQualityInsteadOfRerolling>Set the guaranteed quality instead of rerolling it? Makes quality chances more in line with the chance that it's set to in this menu.</CraftingQualityRebalanced.SetQualityInsteadOfRerolling>
 </LanguageData>
