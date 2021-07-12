@@ -12,5 +12,6 @@
   <CraftingQualityRebalanced.LegendaryChanceExplanation>幻品質のアイテムの生まれる確率は20から、少なくとも幻の一品になる最低スキルレベルまで直線的に増加します。</CraftingQualityRebalanced.LegendaryChanceExplanation>
   <CraftingQualityRebalanced.SupressMasterworkMessages>名品質のアイテムが作成されたときのメッセージを抑制しますか？</CraftingQualityRebalanced.SupressMasterworkMessages>
   <CraftingQualityRebalanced.SupressLegendaryMessages>幻品質のアイテムが作成されたときのメッセージを抑制しますか？</CraftingQualityRebalanced.SupressLegendaryMessages>
+  <CraftingQualityRebalanced.SetQualityInsteadOfRerolling>再作成するのでなく、品質保証にしますか？ここで設定した範囲に合わせ,許可品質確率を調整します。</CraftingQualityRebalanced.SetQualityInsteadOfRerolling>
 
 </LanguageData>
