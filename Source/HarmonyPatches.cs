@@ -31,62 +31,23 @@ namespace CraftingQualityRebalanced
 		{
 			try
 			{
-				if (relevantSkillLevel >= minSkill[(int)QualityCategory.Legendary] && __result < QualityCategory.Legendary && Rand.Chance(legendaryChanceAt20 - ((20 - relevantSkillLevel) * gradientLegendary)))
-				{
-					__result = QualityCategory.Legendary;
-				}
-				else if (relevantSkillLevel >= minSkill[(int)QualityCategory.Masterwork] && __result < QualityCategory.Masterwork)
-				{
-					if (setQualityInsteadOfReroll)
-                    {
-						__result = QualityCategory.Masterwork;
-                    } else
+				for (int i = (int)QualityCategory.Legendary; i > (int)QualityCategory.Awful; i--)
+                {
+					if (relevantSkillLevel >= minSkill[i] 
+						// if inspiration then quality to meet is two levels higher. For example if excellent is guaranteed then it's gonna be for sure legendary
+						&& ((!inspired && __result < (QualityCategory)i) || (inspired && __result < (QualityCategory)Math.Min(i + 2, (int)QualityCategory.Legendary)))
+						// if legendary without inspiration then also roll chance set in settings
+						&& ((QualityCategory)i != QualityCategory.Legendary || inspired || Rand.Chance(legendaryChanceAt20 - ((20 - relevantSkillLevel) * gradientLegendary))))
 					{
-						__result = QualityUtility.GenerateQualityCreatedByPawn(relevantSkillLevel, inspired);
-					}
-				}
-				else if (relevantSkillLevel >= minSkill[(int)QualityCategory.Excellent] && __result < QualityCategory.Excellent)
-				{
-					if (setQualityInsteadOfReroll)
-					{
-						__result = QualityCategory.Excellent;
-					}
-					else
-					{
-						__result = QualityUtility.GenerateQualityCreatedByPawn(relevantSkillLevel, inspired);
-					}
-				}
-				else if (relevantSkillLevel >= minSkill[(int)QualityCategory.Good] && __result < QualityCategory.Good)
-				{
-					if (setQualityInsteadOfReroll)
-					{
-						__result = QualityCategory.Good;
-					}
-					else
-					{
-						__result = QualityUtility.GenerateQualityCreatedByPawn(relevantSkillLevel, inspired);
-					}
-				}
-				else if (relevantSkillLevel >= minSkill[(int)QualityCategory.Normal] && __result < QualityCategory.Normal)
-				{
-					if (setQualityInsteadOfReroll)
-					{
-						__result = QualityCategory.Normal;
-					}
-					else
-					{
-						__result = QualityUtility.GenerateQualityCreatedByPawn(relevantSkillLevel, inspired);
-					}
-				}
-				else if (relevantSkillLevel >= minSkill[(int)QualityCategory.Poor] && __result < QualityCategory.Poor)
-				{
-					if (setQualityInsteadOfReroll)
-					{
-						__result = QualityCategory.Poor;
-					}
-					else
-					{
-						__result = QualityUtility.GenerateQualityCreatedByPawn(relevantSkillLevel, inspired);
+						if (setQualityInsteadOfReroll)
+						{
+							__result = (QualityCategory)(inspired ? Math.Min(i + 2, (int)QualityCategory.Legendary) : i);
+						}
+						else
+						{
+							__result = QualityUtility.GenerateQualityCreatedByPawn(relevantSkillLevel, inspired);
+						}
+						break;
 					}
 				}
 			}
