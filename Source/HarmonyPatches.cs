@@ -40,7 +40,8 @@ namespace CraftingQualityRebalanced
 				else
 				{
 					// Not a random legendary, step backwards through quality levels until we match the rolled quality or we find the minimum for this skill level
-					for (int i = (int)QualityCategory.Legendary; i > (int)QualityCategory.Awful; i--)
+					// start at masterwork because legendary is handled already
+					for (int i = (int)QualityCategory.Masterwork; i > (int)QualityCategory.Awful; i--)
 					{
 
 						if (relevantSkillLevel >= minSkill[i] 
