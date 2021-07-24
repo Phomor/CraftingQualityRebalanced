@@ -31,26 +31,32 @@ namespace CraftingQualityRebalanced
 		{
 			try
 			{
-				for (int i = (int)QualityCategory.Legendary; i > (int)QualityCategory.Awful; i--)
+				// Check first if it hit the random legendary chance, and if so, set it and move on.
+				if (relevantSkillLevel >= minSkill[(int)QualityCategory.Legendary] && __result < QualityCategory.Legendary
+					&& Rand.Chance(legendaryChanceAt20 - ((20 - relevantSkillLevel) * gradientLegendary)))
 				{
+					__result = QualityCategory.Legendary;
+				}
+				else
+				{
+					// Not a random legendary, step backwards through quality levels until we match the rolled quality or we find the minimum for this skill level
+					for (int i = (int)QualityCategory.Legendary; i > (int)QualityCategory.Awful; i--)
+					{
 
-					if (relevantSkillLevel >= minSkill[(int)QualityCategory.Legendary] && __result < QualityCategory.Legendary
-                        && Rand.Chance(legendaryChanceAt20 - ((20 - relevantSkillLevel) * gradientLegendary)))
-					{
-						__result = QualityCategory.Legendary;
-					} else  if (relevantSkillLevel >= minSkill[i] 
-						// if inspiration then quality to meet is two levels higher. For example if excellent is guaranteed then it's gonna be for sure legendary
-						&& ((!inspired && __result < (QualityCategory)i) || (inspired && __result < (QualityCategory)Math.Min(i + 2, (int)QualityCategory.Legendary))))
-					{
-						if (setQualityInsteadOfReroll)
+						if (relevantSkillLevel >= minSkill[i] 
+							// if inspiration then quality to meet is two levels higher. For example if excellent is guaranteed then it's gonna be for sure legendary
+							&& ((!inspired && __result < (QualityCategory)i) || (inspired && __result < (QualityCategory)Math.Min(i + 2, (int)QualityCategory.Legendary))))
 						{
-							__result = (QualityCategory)(inspired ? Math.Min(i + 2, (int)QualityCategory.Legendary) : i);
+							if (setQualityInsteadOfReroll)
+							{
+								__result = (QualityCategory)(inspired ? Math.Min(i + 2, (int)QualityCategory.Legendary) : i);
+							}
+							else
+							{
+								__result = QualityUtility.GenerateQualityCreatedByPawn(relevantSkillLevel, inspired);
+							}
+							break;
 						}
-						else
-						{
-							__result = QualityUtility.GenerateQualityCreatedByPawn(relevantSkillLevel, inspired);
-						}
-						break;
 					}
 				}
 			}
