@@ -1,17 +1,10 @@
-﻿/*
+/*
  * User: Phomor
  * Date: 22.06.2018
  * Time: 18:18
  */
 using System;
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Reflection;
 using HarmonyLib;
-using UnityEngine;
 using Verse;
 using RimWorld;
 
