@@ -10,7 +10,7 @@
   <CraftingQualityRebalanced.MinimumSkillLegendary>作品品质最低为传奇的技能等级，设为20以上则此设置无效: </CraftingQualityRebalanced.MinimumSkillLegendary>
   <CraftingQualityRebalanced.LegendaryChance>20级技能制作出传奇级作品的几率: </CraftingQualityRebalanced.LegendaryChance>
   <CraftingQualityRebalanced.LegendaryChanceExplanation>传奇级作品出现的几率基于技能等级呈线性上升，到达20级时，最低几率为上方滑块设定的数值。</CraftingQualityRebalanced.LegendaryChanceExplanation>
-  <CraftingQualityRebalanced.SupressMasterworkMessages>不显示大师级作品的通知消息</CraftingQualityRebalanced.SupressMasterworkMessages>
-  <CraftingQualityRebalanced.SupressLegendaryMessages>不显示传奇级作品的通知消息</CraftingQualityRebalanced.SupressLegendaryMessages>
-
+  <CraftingQualityRebalanced.SupressMasterworkMessages>不显示大师级作品的消息通知</CraftingQualityRebalanced.SupressMasterworkMessages>
+  <CraftingQualityRebalanced.SupressLegendaryMessages>不显示传奇级作品的消息通知</CraftingQualityRebalanced.SupressLegendaryMessages>
+  <CraftingQualityRebalanced.SetQualityInsteadOfRerolling>是否使用各级设定的最低等级品质取代重随机制？物品品质几率将更贴合Mod设置。</CraftingQualityRebalanced.SetQualityInsteadOfRerolling>
 </LanguageData>
